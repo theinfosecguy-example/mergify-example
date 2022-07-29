@@ -1,7 +1,12 @@
+queue_rules:
+  - name: default
+    conditions: []
+
 pull_request_rules:
-  - name: Automatic merge on approval
+  - name: merge using the merge queue
     conditions:
-      - "#approved-reviews-by>=1"
+      - "#files=1"
+      - "author=theinfosecguy-example"
     actions:
-      merge:
-        method: merge
+      queue:
+        name: default
