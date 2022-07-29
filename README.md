@@ -1,3 +1,3 @@
 # mergify-example
 
-testing...
+This is a sample description.
